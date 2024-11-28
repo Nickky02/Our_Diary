@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import cupcakeImage from "./assets/cupcake.png"; // Import cupcake image
 import { screenshots } from "./imageImports";
+import musicFile from "./music/Still_Corners.mp3";
+
+const audio = new Audio(musicFile);
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +22,8 @@ const App = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
+      audio.pause(); // Stop music
+      setIsPlaying(false);
     }, 600);
   };
 
@@ -27,6 +32,13 @@ const App = () => {
     setIsClicking(true);
     setTimeout(() => setIsClicking(false), 300); // Reset after animation
     toggleGallery();
+
+    if (audio.paused) {
+      audio.play(); // Play music 
+    } else {
+      audio.pause(); 
+      audio.currentTime = 0;
+    }
   };
 
   // Navigate to next image
