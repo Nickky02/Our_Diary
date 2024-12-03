@@ -43,11 +43,7 @@ import screenshot42 from "./images/screenshot42.jpg";
 import screenshot43 from "./images/screenshot43.jpg";
 import screenshot44 from "./images/screenshot44.jpg";
 import screenshot45 from "./images/screenshot45.jpg";
-import screenshot46 from "./images/screenshot46.jpg";
-import screenshot47 from "./images/screenshot47.jpg";
-import screenshot48 from "./images/screenshot48.jpg";
-import screenshot49 from "./images/screenshot49.png";
-import screenshot50 from "./images/screenshot50.png";
+import screenshot46 from "./images/screenshot46.png";
 
 
 export const screenshots = [
@@ -96,9 +92,5 @@ export const screenshots = [
   screenshot43,
   screenshot44,
   screenshot45,
-  screenshot46,
-  screenshot47,
-  screenshot48,
-  screenshot49,
-  screenshot50
+  screenshot46
 ];
